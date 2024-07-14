@@ -1,5 +1,9 @@
 function withStoreConfig(nextConfig = {}) {
-  const features = nextConfig.features || {}
+  const features = nextConfig.features || {
+    features: {
+      search: true,
+    },
+  }
   delete nextConfig.features
 
   nextConfig.env = nextConfig.env || {}
